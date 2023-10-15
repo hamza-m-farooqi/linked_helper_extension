@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Helper",
+    "description": "Custom Plugin Developed by hamzamfarooqi to boost performance on LinkedIn.",
+    "version": "0.0.1",
+    "icons": {
+        "16": "assets/logo/logo-16.png",
+        "48": "assets/logo/logo-48.png",
+        "128": "assets/logo/logo-128.png"
+    },
+    "options_page": "views/settings.html",
+    "action": {
+        "default_title": "LinkedIn Helper",
+        "default_popup": "views/popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "assets/js/service-worker.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.linkedin.com/*",
+                "https://www.google.com/*"
+            ],
+            "js": [
+                "assets/js/jquery.js",
+                "assets/js/foreground.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "https://www.linkedin.com/*",
+                "https://www.google.com/*"
+            ],
+            "js": [
+                "assets/js/loader.js"
+            ],
+            "css": [],
+            "run_at": "document_end"
+        }
+    ]
+}

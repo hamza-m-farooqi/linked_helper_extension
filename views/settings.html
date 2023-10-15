@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LinkedIn-Helper: Settings</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="chrome-extension://khmohloeghiglnhiahhobgbldbkkieaj/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="chrome-extension://khmohloeghiglnhiahhobgbldbkkieaj/assets/css/settings.css">
+    <script src="chrome-extension://khmohloeghiglnhiahhobgbldbkkieaj/assets/js/jquery.js"></script>
+    <script src="chrome-extension://khmohloeghiglnhiahhobgbldbkkieaj/assets/js/bootstrap.min.js"></script>
+    <script src="chrome-extension://khmohloeghiglnhiahhobgbldbkkieaj/assets/js/settings.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid p-0 m-0">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="linkedin_helper_header_image" src="/assets/images/home_page.jpeg"
+                    alt="linked_in_home_page_image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title d-flex justify-content-between mb-0">
+                            <div class="text-primary">
+                                LinkedIn-Helper Settings
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form id="linkedin_helper_settings_form">
+                                    <div class="form-group">
+                                        <label for="linkedin_helper_settings_form_gpt_model_selectbox">GPT Model</label>
+                                        <select class="form-control"
+                                            id="linkedin_helper_settings_form_gpt_model_selectbox">
+                                            <option value="gpt-3.5-turbo">GPT 3.5 Turbo (Latest)</option>
+                                            <option value="gpt-3.5-turbo-16k-0613">GPT 3.5 Turbo (16K-0613)</option>
+                                            <option value="gpt-3.5-turbo-16k">GPT 3.5 Turbo (16K)</option>
+                                            <option value="gpt-3.5-turbo-0613">GPT 3.5 Turbo-0613</option>
+                                            <option value="gpt-3.5-turbo-0301">GPT 3.5 Turbo-0301</option>
+                                            <option value="text-davinci-002">Text Davinci-002</option>
+                                            <option value="text-davinci-001">Text Davinci-001</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="linkedin_helper_settings_form_instruction_field">GPT
+                                            Instruction</label>
+
+                                        <textarea class="form-control"
+                                            id="linkedin_helper_settings_form_instruction_field"
+                                            aria-describedby="linkedin_helper_settings_form_instruction_field_help"
+                                            placeholder="Modify Instructions" rows="6" required></textarea>
+                                        <small id="linkedin_helper_settings_form_instruction_field_help"
+                                            class="form-text text-muted">Customize the behavior of the LinkedIn Helper
+                                            extension by providing specific instructions. These instructions will guide
+                                            the extension on how to assist you in creating comments for LinkedIn
+                                            posts.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="linkedin_helper_settings_form_post_button_click_status_checkbox">
+                                            <label class="form-check-label"
+                                                for="linkedin_helper_settings_form_post_button_click_status_checkbox">
+                                                Automatically Click <b>Post Button</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex justify-content-center">
+                                        <button type="submit" id="linkedin_helper_settings_form_submit_button"
+                                            style="width: 100%;" class="btn btn-primary text-center">Save
+                                            Settings</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
